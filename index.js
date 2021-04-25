@@ -52,7 +52,7 @@ menu = () => {
     if (options === "Add an intern") {
       createIntern();
     }
-    // generateTeam();
+    generateTeam();
   })
 }
 
@@ -109,13 +109,20 @@ createIntern = () => {
       name: 'school',
       message: "What school does the intern go to?",
       },
-      ]).then(({name, id, email, github}) => {
-      let engineer = new Engineer(name, id, email, github);
-      listOfEngineers.push(engineer);
-      console.log(engineer);
-      console.log(listOfEngineers);
+      ]).then(({name, id, email, school}) => {
+      let intern = new Intern(name, id, email, school);
+      listOfInterns.push(intern);
+      console.log(intern);
+      console.log(listOfInterns);
       menu();
 })
+}
+
+generateTeam = () => {
+  console.log("Team has been made!");
+  console.log(`The manager: ${manager}`);
+  console.log(`Intern(s): ${listOfInterns}`);
+  console.log(`Engineers(s): ${listOfEngineers}`);
 }
 
 createManager()
