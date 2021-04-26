@@ -187,7 +187,7 @@ generateTeam = (name, id, email, other) => {
     `<div class="card">
       <header>
           <h3 id="name">${intern.name}</h3>
-          <h4 id="role">Intern</h4>
+          <h4 id="role"><i class="material-icons">phone_in_talk</i>Intern</h4>
       </header>
       <div class="body">
           <ul>
