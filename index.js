@@ -9,6 +9,7 @@ const fs = require("fs");
 let manager;
 let intern;
 let engineer;
+let engineerCard;
 let listOfEngineers = [];
 let listOfInterns = [];
 let test;
@@ -167,22 +168,34 @@ generateTeam = (name, id, email, other) => {
     engineerCard = "";
   } else {
     for (let i = 0; i < listOfEngineers.length; i++) {
-    test += `<h1>${listOfEngineers[i].name}</h1>`;
+    engineerCard += `<div class="card">
+    <header>
+        <h3 id="name">${engineer.name}</h3>
+        <h4 id="role"><i class="material-icons">build</i>Engineer</h4>
+    </header>
+    <div class="body">
+        <ul>
+            <li>${engineer.id}</li>
+            <li>${engineer.email}</li>
+            <li>${engineer.github}</li>
+        </ul>
+    </div>
+  </div>`;}
   }
-    engineerCard = 
-    `<div class="card">
-      <header>
-          <h3 id="name">${engineer.name}</h3>
-          <h4 id="role"><i class="material-icons">build</i>Engineer</h4>
-      </header>
-      <div class="body">
-          <ul>
-              <li>${engineer.id}</li>
-              <li>${engineer.email}</li>
-              <li>${engineer.github}</li>
-          </ul>
-      </div>
-    </div>`;}
+    // engineerCard = 
+    // `<div class="card">
+    //   <header>
+    //       <h3 id="name">${engineer.name}</h3>
+    //       <h4 id="role"><i class="material-icons">build</i>Engineer</h4>
+    //   </header>
+    //   <div class="body">
+    //       <ul>
+    //           <li>${engineer.id}</li>
+    //           <li>${engineer.email}</li>
+    //           <li>${engineer.github}</li>
+    //       </ul>
+    //   </div>
+    // </div>`;}
   
   if (!intern) {
     internCard = "";
