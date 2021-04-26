@@ -111,8 +111,6 @@ createEngineer = () => {
   ]).then(({name, id, email, github}) => {
   engineer = new Engineer(name, id, email, github);
   listOfEngineers.push(engineer);
-  console.log(engineer);
-  console.log(listOfEngineers);
   menu();
 })
 }
@@ -171,14 +169,14 @@ generateTeam = (name, id, email, other) => {
     engineerCard += 
       `<div class="card">
         <header>
-            <h2 id="name">${engineer.name}</h2>
+            <h2 id="name">${listOfEngineers[i].name}</h2>
             <h3 id="role"><i class="material-icons">build</i>Engineer</h3>
         </header>
         <div class="body">
             <ul>
-                <li>ID: ${engineer.id}</li>
-                <li>Email: ${engineer.email}</li>
-                <li>GitHub: ${engineer.github}</li>
+                <li>ID: ${listOfEngineers[i].id}</li>
+                <li>Email: ${listOfEngineers[i].email}</li>
+                <li>GitHub: ${listOfEngineers[i].github}</li>
             </ul>
         </div>
       </div>`;}
@@ -191,14 +189,14 @@ generateTeam = (name, id, email, other) => {
     internCard += 
       `<div class="card">
         <header>
-            <h2 id="name">${intern.name}</h2>
+            <h2 id="name">${listOfInterns[i].name}</h2>
             <h3 id="role"><i class="material-icons">phone_in_talk</i>Intern</h3>
         </header>
         <div class="body">
             <ul>
-                <li>ID: ${intern.id}</li>
-                <li>Email: ${intern.email}</li>
-                <li>School: ${intern.school}</li>
+                <li>ID: ${listOfInterns[i].id}</li>
+                <li>Email: ${listOfInterns[i].email}</li>
+                <li>School: ${listOfInterns[i].school}</li>
             </ul>
         </div>
       </div>`;}
