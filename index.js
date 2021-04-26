@@ -4,15 +4,16 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { clear } = require("console");
+// const { clear } = require("console");
 
 let manager;
 let intern;
 let engineer;
 let listOfEngineers = [];
 let listOfInterns = [];
+let test;
 
-const generateHTML = (name, id, email, other) =>
+const generateHTML = () =>
 `
 <!DOCTYPE html>
 <html lang="en">
@@ -20,14 +21,17 @@ const generateHTML = (name, id, email, other) =>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/style.css">
     <title>Team Builder</title>
 </head>
 <body>
     <header class="title">
-        <h1>My Team</h1>
+        <h1>Team Builder</h1>
     </header>
-    <div>${name.Manager}</div>
+    <div id="card-container">
+    ${managerCard}
+    ${engineerCard}
+    </div>
 `;
 
 createManager = () => {
@@ -142,6 +146,38 @@ createIntern = () => {
 }
 
 generateTeam = (name, id, email, other) => {
+  managerCard = 
+    `<div class="card">
+      <header>
+          <h3 id="name">${manager.name}</h3>
+          <h4 id="role">Manager</h4>
+      </header>
+      <div class="body">
+          <ul>
+              <li>${manager.id}</li>
+              <li>${manager.email}</li>
+              <li>${manager.officeNumber}</li>
+          </ul>
+      </div>
+    </div>`;
+  engineerCard = 
+    `<div class="card">
+      <header>
+          <h3 id="name">${engineerCard.name}</h3>
+          <h4 id="role">Manager</h4>
+      </header>
+      <div class="body">
+          <ul>
+              <li>${engineerCard.id}</li>
+              <li>${engineerCard.email}</li>
+              <li>${engineerCard.github}</li>
+          </ul>
+      </div>
+    </div>`;
+  // for (let i = 0; i < listOfEngineers.length; i++) {
+  //   test += `<h1>${listOfEngineers[i].name}</h1>`;
+  // }
+  console.log(test);
   const HTMLPageContent = generateHTML(name, id, email, other);
 
     fs.writeFile('index2.html', HTMLPageContent, (err) =>
