@@ -21,6 +21,7 @@ const generateHTML = () =>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./src/style.css">
     <title>Team Builder</title>
 </head>
@@ -168,7 +169,7 @@ generateTeam = (name, id, email, other) => {
     `<div class="card">
       <header>
           <h3 id="name">${engineer.name}</h3>
-          <h4 id="role">Engineer</h4>
+          <h4 id="role"><i class="material-icons">build</i>Engineer</h4>
       </header>
       <div class="body">
           <ul>
