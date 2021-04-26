@@ -8,11 +8,11 @@ const fs = require("fs");
 
 let manager;
 let intern;
+let internCard;
 let engineer;
 let engineerCard;
 let listOfEngineers = [];
 let listOfInterns = [];
-let test;
 
 const generateHTML = () =>
 `
@@ -168,54 +168,41 @@ generateTeam = (name, id, email, other) => {
     engineerCard = "";
   } else {
     for (let i = 0; i < listOfEngineers.length; i++) {
-    engineerCard += `<div class="card">
-    <header>
-        <h3 id="name">${engineer.name}</h3>
-        <h4 id="role"><i class="material-icons">build</i>Engineer</h4>
-    </header>
-    <div class="body">
-        <ul>
-            <li>${engineer.id}</li>
-            <li>${engineer.email}</li>
-            <li>${engineer.github}</li>
-        </ul>
-    </div>
-  </div>`;}
-  }
-    // engineerCard = 
-    // `<div class="card">
-    //   <header>
-    //       <h3 id="name">${engineer.name}</h3>
-    //       <h4 id="role"><i class="material-icons">build</i>Engineer</h4>
-    //   </header>
-    //   <div class="body">
-    //       <ul>
-    //           <li>${engineer.id}</li>
-    //           <li>${engineer.email}</li>
-    //           <li>${engineer.github}</li>
-    //       </ul>
-    //   </div>
-    // </div>`;}
+    engineerCard += 
+      `<div class="card">
+        <header>
+            <h3 id="name">${engineer.name}</h3>
+            <h4 id="role"><i class="material-icons">build</i>Engineer</h4>
+        </header>
+        <div class="body">
+            <ul>
+                <li>${engineer.id}</li>
+                <li>${engineer.email}</li>
+                <li>${engineer.github}</li>
+            </ul>
+        </div>
+      </div>`;}
+  }  
   
   if (!intern) {
     internCard = "";
   } else {
-    internCard = 
-    `<div class="card">
-      <header>
-          <h3 id="name">${intern.name}</h3>
-          <h4 id="role"><i class="material-icons">phone_in_talk</i>Intern</h4>
-      </header>
-      <div class="body">
-          <ul>
-              <li>${intern.id}</li>
-              <li>${intern.email}</li>
-              <li>${intern.school}</li>
-          </ul>
-      </div>
-    </div>`;
+    for (let i = 0; i < listOfInterns.length; i++) {
+    internCard += 
+      `<div class="card">
+        <header>
+            <h3 id="name">${intern.name}</h3>
+            <h4 id="role"><i class="material-icons">phone_in_talk</i>Intern</h4>
+        </header>
+        <div class="body">
+            <ul>
+                <li>${intern.id}</li>
+                <li>${intern.email}</li>
+                <li>${intern.school}</li>
+            </ul>
+        </div>
+      </div>`;}
   }
-  
   // for (let i = 0; i < listOfEngineers.length; i++) {
   //   test += `<h1>${listOfEngineers[i].name}</h1>`;
   // }
