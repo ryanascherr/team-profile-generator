@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    background-color: #DE3163;
+    color: white;
+    text-align: center;
+    padding: 45px 0;
+}
+
+#card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 15px;
+    width: 200px;
+}
+
+.card header {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+.body {
+    background-color: lightgray;
+    padding: 20px 10px;
+}
+
+.card ul {
+    list-style-type: none;
+}
+
+.card li {
+    background-color: white;
+    margin: 1px;
+}
