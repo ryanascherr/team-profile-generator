@@ -152,14 +152,14 @@ generateTeam = (name, id, email, other) => {
   managerCard = 
     `<div class="card">
       <header>
-          <h3 id="name">${manager.name}</h3>
-          <h4 id="role"><i class="material-icons">free_breakfast</i>Manager</h4>
+          <h2 id="name">${manager.name}</h2>
+          <h3 id="role"><i class="material-icons">free_breakfast</i>Manager</h3>
       </header>
       <div class="body">
           <ul>
-              <li>${manager.id}</li>
-              <li>${manager.email}</li>
-              <li>${manager.officeNumber}</li>
+              <li>ID: ${manager.id}</li>
+              <li>Email: ${manager.email}</li>
+              <li>Office Number: ${manager.officeNumber}</li>
           </ul>
       </div>
     </div>`;
@@ -171,14 +171,14 @@ generateTeam = (name, id, email, other) => {
     engineerCard += 
       `<div class="card">
         <header>
-            <h3 id="name">${engineer.name}</h3>
-            <h4 id="role"><i class="material-icons">build</i>Engineer</h4>
+            <h2 id="name">${engineer.name}</h2>
+            <h3 id="role"><i class="material-icons">build</i>Engineer</h3>
         </header>
         <div class="body">
             <ul>
-                <li>${engineer.id}</li>
-                <li>${engineer.email}</li>
-                <li>${engineer.github}</li>
+                <li>ID: ${engineer.id}</li>
+                <li>Email: ${engineer.email}</li>
+                <li>GitHub: ${engineer.github}</li>
             </ul>
         </div>
       </div>`;}
@@ -191,14 +191,14 @@ generateTeam = (name, id, email, other) => {
     internCard += 
       `<div class="card">
         <header>
-            <h3 id="name">${intern.name}</h3>
-            <h4 id="role"><i class="material-icons">phone_in_talk</i>Intern</h4>
+            <h2 id="name">${intern.name}</h2>
+            <h3 id="role"><i class="material-icons">phone_in_talk</i>Intern</h3>
         </header>
         <div class="body">
             <ul>
-                <li>${intern.id}</li>
-                <li>${intern.email}</li>
-                <li>${intern.school}</li>
+                <li>ID: ${intern.id}</li>
+                <li>Email: ${intern.email}</li>
+                <li>School: ${intern.school}</li>
             </ul>
         </div>
       </div>`;}

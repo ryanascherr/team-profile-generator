@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 5px 0;
+}
+
 .title {
     background-color: #DE3163;
     color: white;
@@ -18,18 +22,20 @@
 }
 
 .card {
-    margin: 15px;
     width: 200px;
+    margin: 15px;
+    box-shadow: 5px 5px 5px gray;
+    border-left: 1px solid lightgray;
 }
 
 .card header {
-    background-color: blue;
+    background-color: #3498DB;
     color: white;
     padding: 10px;
 }
 
 .body {
-    background-color: lightgray;
+    background-color: #F4F6F6;
     padding: 20px 10px;
 }
 
@@ -39,9 +45,14 @@
 
 .card li {
     background-color: white;
-    margin: 1px;
+    margin-bottom: 1px;
+    padding: 5px;
+    border: 1px solid lightgray;
 }
 
-img {
-    width: 50px;
+.flex-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
 }
