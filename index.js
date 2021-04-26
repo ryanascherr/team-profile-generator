@@ -156,7 +156,7 @@ generateTeam = (name, id, email, other) => {
       <div class="body">
           <ul>
               <li>ID: ${manager.id}</li>
-              <li>Email: ${manager.email}</li>
+              <li>Email: <a href = "mailto: ${manager.email}" target="_blank">${manager.email}</a></li>
               <li>Office Number: ${manager.officeNumber}</li>
           </ul>
       </div>
@@ -175,8 +175,8 @@ generateTeam = (name, id, email, other) => {
         <div class="body">
             <ul>
                 <li>ID: ${listOfEngineers[i].id}</li>
-                <li>Email: ${listOfEngineers[i].email}</li>
-                <li>GitHub: ${listOfEngineers[i].github}</li>
+                <li>Email: <a href = "mailto: ${listOfEngineers[i].email}" target="_blank">${listOfEngineers[i].email}</a></li>
+                <li>GitHub: <a href = "https://github.com/${listOfEngineers[i].github}" target="_blank">${listOfEngineers[i].github}</a></li>
             </ul>
         </div>
       </div>`;}
@@ -195,15 +195,13 @@ generateTeam = (name, id, email, other) => {
         <div class="body">
             <ul>
                 <li>ID: ${listOfInterns[i].id}</li>
-                <li>Email: ${listOfInterns[i].email}</li>
+                <li>Email: <a href = "mailto: ${listOfInterns[i].email}" target="_blank">${listOfInterns[i].email}</a></li>
                 <li>School: ${listOfInterns[i].school}</li>
             </ul>
         </div>
       </div>`;}
   }
-  // for (let i = 0; i < listOfEngineers.length; i++) {
-  //   test += `<h1>${listOfEngineers[i].name}</h1>`;
-  // }
+
   const HTMLPageContent = generateHTML(name, id, email, other);
 
     fs.writeFile('index2.html', HTMLPageContent, (err) =>
