@@ -213,7 +213,7 @@ generateTeam = (name, id, email, other) => {
 
   const HTMLPageContent = generateHTML(name, id, email, other);
 
-    fs.writeFile('index2.html', HTMLPageContent, (err) =>
+    fs.writeFile('index.html', HTMLPageContent, (err) =>
       err ? console.log(err) : console.log('Successfully created index.html!')
     );
 }
