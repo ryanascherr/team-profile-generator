@@ -152,7 +152,7 @@ generateTeam = (name, id, email, other) => {
     `<div class="card">
       <header>
           <h3 id="name">${manager.name}</h3>
-          <h4 id="role">Manager</h4>
+          <h4 id="role"><i class="material-icons">free_breakfast</i>Manager</h4>
       </header>
       <div class="body">
           <ul>
@@ -165,7 +165,11 @@ generateTeam = (name, id, email, other) => {
 
   if (!engineer) {
     engineerCard = "";
-  } else {engineerCard = 
+  } else {
+    for (let i = 0; i < listOfEngineers.length; i++) {
+    test += `<h1>${listOfEngineers[i].name}</h1>`;
+  }
+    engineerCard = 
     `<div class="card">
       <header>
           <h3 id="name">${engineer.name}</h3>
