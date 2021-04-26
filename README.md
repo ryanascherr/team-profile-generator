@@ -31,7 +31,7 @@ To run tests, run the following command:
 
 In the integrated terminal, users can type "node index" to begin the application. Users will first be asked information about the manager. Afterward, they can add as many engineers and interns as they would like, answering questions about each of them in turn. Once all of the questions are answered, an HTML page is populated with the information given by the user. Click on the following link to see a video demonstration:
 
-https://drive.google.com/file/d/1ieTM_mpCwHedfxsy3Ov_5ff9qq-nZkZy/view
+https://drive.google.com/file/d/1dObiPvF3bVWfENB3uoauGztTpini93cV/view
 
 ## License
 

@@ -26,7 +26,7 @@ const generateHTML = () =>
 </head>
 <body>
     <header class="title">
-        <h1>Team Builder</h1>
+        <h1>My Team</h1>
     </header>
     <div id="card-container">
     ${managerCard}
