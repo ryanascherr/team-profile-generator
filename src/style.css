@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-    width: 200px;
+    width: 225px;
     margin: 15px;
     box-shadow: 5px 5px 5px gray;
     border-left: 1px solid lightgray;
@@ -54,5 +54,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
 
+.icon {
+    margin-right: 10px;
 }

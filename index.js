@@ -8,9 +8,9 @@ const fs = require("fs");
 
 let manager;
 let intern;
-let internCard;
+let internCard = "";
 let engineer;
-let engineerCard;
+let engineerCard = "";
 let listOfEngineers = [];
 let listOfInterns = [];
 
@@ -150,8 +150,11 @@ generateTeam = (name, id, email, other) => {
   managerCard = 
     `<div class="card">
       <header>
-          <h2 id="name">${manager.name}</h2>
-          <h3 id="role"><i class="material-icons">free_breakfast</i>Manager</h3>
+        <h2 id="name">${manager.name}</h2>
+        <div class="flex-center">
+          <h3 class="icon"><i class="material-icons">free_breakfast</i></h3>
+          <h3 id="role">Manager</h3>
+        </div>
       </header>
       <div class="body">
           <ul>
@@ -169,8 +172,11 @@ generateTeam = (name, id, email, other) => {
     engineerCard += 
       `<div class="card">
         <header>
-            <h2 id="name">${listOfEngineers[i].name}</h2>
-            <h3 id="role"><i class="material-icons">build</i>Engineer</h3>
+          <h2 id="name">${listOfEngineers[i].name}</h2>
+          <div class="flex-center">
+            <h3 class="icon"><i class="material-icons">build</i></h3>
+            <h3 id="role">Engineer</h3>
+          </div>
         </header>
         <div class="body">
             <ul>
@@ -189,8 +195,11 @@ generateTeam = (name, id, email, other) => {
     internCard += 
       `<div class="card">
         <header>
-            <h2 id="name">${listOfInterns[i].name}</h2>
-            <h3 id="role"><i class="material-icons">phone_in_talk</i>Intern</h3>
+          <h2 id="name">${listOfInterns[i].name}</h2>
+          <div class="flex-center">
+            <h3 class="icon"><i class="material-icons">phone_in_talk</i></h3>
+            <h3 id="role">Intern</h3>
+          </div>
         </header>
         <div class="body">
             <ul>
