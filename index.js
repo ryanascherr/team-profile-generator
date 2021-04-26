@@ -31,6 +31,7 @@ const generateHTML = () =>
     <div id="card-container">
     ${managerCard}
     ${engineerCard}
+    ${internCard}
     </div>
 `;
 
@@ -160,24 +161,39 @@ generateTeam = (name, id, email, other) => {
           </ul>
       </div>
     </div>`;
+
   engineerCard = 
     `<div class="card">
       <header>
-          <h3 id="name">${engineerCard.name}</h3>
+          <h3 id="name">${engineer.name}</h3>
           <h4 id="role">Manager</h4>
       </header>
       <div class="body">
           <ul>
-              <li>${engineerCard.id}</li>
-              <li>${engineerCard.email}</li>
-              <li>${engineerCard.github}</li>
+              <li>${engineer.id}</li>
+              <li>${engineer.email}</li>
+              <li>${engineer.github}</li>
+          </ul>
+      </div>
+    </div>`;
+
+  internCard = 
+    `<div class="card">
+      <header>
+          <h3 id="name">${intern.name}</h3>
+          <h4 id="role">Manager</h4>
+      </header>
+      <div class="body">
+          <ul>
+              <li>${intern.id}</li>
+              <li>${intern.email}</li>
+              <li>${intern.school}</li>
           </ul>
       </div>
     </div>`;
   // for (let i = 0; i < listOfEngineers.length; i++) {
   //   test += `<h1>${listOfEngineers[i].name}</h1>`;
   // }
-  console.log(test);
   const HTMLPageContent = generateHTML(name, id, email, other);
 
     fs.writeFile('index2.html', HTMLPageContent, (err) =>
