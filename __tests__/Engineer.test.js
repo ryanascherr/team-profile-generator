@@ -5,24 +5,14 @@ test("Can instantiate Engineer instance", () => {
     expect(typeof(ryan)).toBe("object")
 })
 
-test("Returns name of Engineer", () => {
-    const ryan = new Engineer("Ryan", 1, "ryanascherr@gmail.com", "ryanascherr");
-    expect(ryan.getName()).toBe("Ryan")
-})
-
-test("Returns ID of Engineer", () => {
-    const ryan = new Engineer("Ryan", 1, "ryanascherr@gmail.com", "ryanascherr");
-    expect(ryan.getId()).toBe(1)
-})
-
-test("Returns email of Engineer", () => {
-    const ryan = new Engineer("Ryan", 1, "ryanascherr@gmail.com", "ryanascherr");
-    expect(ryan.getEmail()).toBe("ryanascherr@gmail.com")
-})
-
-test("Returns GitHub username of Engineer", () => {
+test("getGithub() returns github username", () => {
     const ryan = new Engineer("Ryan", 1, "ryanascherr@gmail.com", "ryanascherr");
     expect(ryan.getGithub()).toBe("ryanascherr")
+})
+
+test("Variable github returns github username", () => {
+    const ryan = new Engineer("Ryan", 1, "ryanascherr@gmail.com", "ryanascherr");
+    expect(ryan.github).toBe("ryanascherr")
 })
 
 test("Returns role of Engineer", () => {

@@ -5,24 +5,14 @@ test("Can instantiate Intern instance", () => {
     expect(typeof(ryan)).toBe("object")
 })
 
-test("Returns name of Intern", () => {
-    const ryan = new Intern("Ryan", 1, "ryanascherr@gmail.com", "Loyola");
-    expect(ryan.getName()).toBe("Ryan")
-})
-
-test("Returns ID of Intern", () => {
-    const ryan = new Intern("Ryan", 1, "ryanascherr@gmail.com", "Loyola");
-    expect(ryan.getId()).toBe(1)
-})
-
-test("Returns email of Intern", () => {
-    const ryan = new Intern("Ryan", 1, "ryanascherr@gmail.com", "Loyola");
-    expect(ryan.getEmail()).toBe("ryanascherr@gmail.com")
-})
-
-test("Returns school of Intern", () => {
+test("getSchool returns school", () => {
     const ryan = new Intern("Ryan", 1, "ryanascherr@gmail.com", "Loyola");
     expect(ryan.getSchool()).toBe("Loyola")
+})
+
+test("Variable school returns school", () => {
+    const ryan = new Intern("Ryan", 1, "ryanascherr@gmail.com", "Loyola");
+    expect(ryan.school).toBe("Loyola")
 })
 
 test("Returns role of Intern", () => {

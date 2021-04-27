@@ -74,13 +74,15 @@ menu = () => {
     choices: ["Add an engineer", "Add an intern", "Nope, all good!"]
     },
   ]).then(({options}) => {
-    if (options === "Add an engineer") {
-      createEngineer();
-    }
-    else if (options === "Add an intern") {
-      createIntern();
-    } else {
-      generateTeam();
+    switch(options) {
+      case "Add an engineer":
+        createEngineer();
+        break;
+      case "Add an intern":
+        createIntern();
+        break;
+      case "Nope, all good!":
+        generateTeam();
     }
   })
 }
@@ -163,7 +165,7 @@ generateTeam = (name, id, email, other) => {
           </ul>
       </div>
     </div>`;
-
+  
   if (!engineer) {
     engineerCard = "";
   } else {
